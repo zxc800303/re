@@ -1,55 +1,85 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://i.imgs.ovh/2023/11/30/pzsDI.th.png">
   <title>個人網站</title>
   <style>
     body {
       margin: 0;
     }
+
+    .flex {
+      display: flex;
+    }
+
+    .daoHang {
+      padding: 10px 20px;
+      border-bottom: 1px solid rgb(190, 190, 190);
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* 側邊欄樣式 */
+    .sidebar {
+      width: 300px;
+      background-color: #ddd;
+      /* 灰色背景色 */
+    }
+
+    /* 主要內容區塊樣式 */
+    .main-content {
+      flex: 3;
+      padding: 30px;
+      max-width: 700px;
+      min-height: 70vh;
+      width: 90%;
+      letter-spacing: 1px;
+      line-height: 1.7;
+    }
+
+    /* 撥放器樣式 */
+    audio {
+      width: 100%;
+      margin-top: 1px;
+    }
   </style>
 </head>
 
-<body style="
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-">
+<body style="margin: 0; display: flex; flex-direction: column;">
+
   <touxianglan
-    style="width: 100%;height:160px;background-color: #eee;display: flex;align-items: center;justify-content: center;">
+    style="width: 100%; height:160px; background-color: #eee; display: flex; align-items: center; justify-content: center;">
     <img src="https://i.imgs.ovh/2023/11/27/pF7mu.th.jpeg" alt="狗狗" width="80px" height="80px">
   </touxianglan>
-  
-    <zhuneirong style="
-    display: block;
-    padding: 30px;
-    max-width: 700px;
-    min-height: 70vh;
-    width: 90%;
-    letter-spacing: 1px;
-    line-height: 1.7;">
-      <p>123123123213123123</p>
-      <p>我的網站</p>
-      <p>我的網站</p>
-      <p>我的網站</p>
 
-    </zhuneirong>
-
+  <div class="flex">
+    <!-- 側邊欄 -->
+    <div class="sidebar">
+      <!-- 左邊新增的區塊 -->
+      <p>灰色と青</p>
+      <!-- 播放器 -->
+      <audio controls>
+        <source src="https://zxc800303.github.io/re/%E7%81%B0%E8%89%B2%E3%81%A8%E9%9D%92.mp3" type="audio/mp3">
+      </audio>
+    </div>
     
-    <dibulan style="width: 100%;height:160px;background-color: #eee;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-      <p>版權</p>
-      <p>網站備案號</p>
-
-    </dibulan>
-
-
-
-
-
-
+      <!-- 主要內容區塊 -->
+    <div class="main-content">
+      <h2>主要內容</h2>
+      <!-- 這裡放置您的側邊欄內容 -->
+      <p>內容</p>
+    </div>
   </div>
+
+  <div
+    style="width: 100%; height:160px; background-color: #eee; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <p>版權</p>
+    <p>網站備案號</p>
+  </div>
+
 </body>
 
 </html>
